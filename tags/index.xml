@@ -6,20 +6,41 @@
     <description>Recent content in Tags on 木木的小站</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Mar 2024 23:57:43 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jun 2025 23:29:20 +0800</lastBuildDate>
     <atom:link href="https://blog.l50.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CDN</title>
+      <link>https://blog.l50.top/tags/cdn/</link>
+      <pubDate>Mon, 16 Jun 2025 23:29:20 +0800</pubDate>
+      <guid>https://blog.l50.top/tags/cdn/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Daily</title>
       <link>https://blog.l50.top/tags/daily/</link>
-      <pubDate>Thu, 07 Mar 2024 23:57:43 +0800</pubDate>
+      <pubDate>Mon, 16 Jun 2025 23:29:20 +0800</pubDate>
       <guid>https://blog.l50.top/tags/daily/</guid>
       <description></description>
     </item>
     <item>
       <title>Life</title>
       <link>https://blog.l50.top/tags/life/</link>
-      <pubDate>Thu, 07 Mar 2024 23:57:43 +0800</pubDate>
+      <pubDate>Mon, 16 Jun 2025 23:29:20 +0800</pubDate>
       <guid>https://blog.l50.top/tags/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Server</title>
+      <link>https://blog.l50.top/tags/server/</link>
+      <pubDate>Mon, 16 Jun 2025 23:29:20 +0800</pubDate>
+      <guid>https://blog.l50.top/tags/server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Techs</title>
+      <link>https://blog.l50.top/tags/techs/</link>
+      <pubDate>Mon, 16 Jun 2025 23:29:20 +0800</pubDate>
+      <guid>https://blog.l50.top/tags/techs/</guid>
       <description></description>
     </item>
   </channel>
