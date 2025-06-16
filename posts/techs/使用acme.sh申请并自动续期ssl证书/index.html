@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>使用acme.sh申请并自动续期SSL证书 | 木木的小站</title>
-<meta name="keywords" content="Daily, Life">
-<meta name="description" content="一）ACME安装
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>使用acme.sh申请并自动续期SSL证书 | 木木的小站</title><meta name=keywords content="Daily,Life"><meta name=description content="一）ACME安装
 
 
 1
@@ -31,71 +22,8 @@ curl  https://get.acme.sh | sh
 acme.sh --set-default-ca  --server  letsencrypt
 
 
-acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。">
-<meta name="author" content="木木">
-<link rel="canonical" href="https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.71d693e968cb1cef0850d07d74ebe3b179d7d1aea20cfcbf3c44dbad2e3bbc47.css" integrity="sha256-cdaT6WjLHO8IUNB9dOvjsXnX0a6iDPy/PETbrS47vEc=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://blog.l50.top/img/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://blog.l50.top/img/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://blog.l50.top/img/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://blog.l50.top/android-chrome-192x192.png">
-<link rel="mask-icon" href="https://blog.l50.top/android-chrome-512x512.png">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:url" content="https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/">
-  <meta property="og:site_name" content="木木的小站">
-  <meta property="og:title" content="使用acme.sh申请并自动续期SSL证书">
-  <meta property="og:description" content="一）ACME安装 1 curl https://get.acme.sh | sh 安装程序会自动做以下操作：
-自动把 acme.sh 安装到你的 home 的.acme.sh目录下，即~/.acme.sh/ 自动创建一个 bash 的 alias, 方便你的使用: alias acme.sh=~/.acme.sh/acme.sh 自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书. （二）更改默认证书机构 1 acme.sh --set-default-ca --server letsencrypt acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-03-15T20:52:43+08:00">
-    <meta property="article:modified_time" content="2023-03-16T20:52:43+08:00">
-    <meta property="article:tag" content="Daily">
-    <meta property="article:tag" content="Life">
-    <meta property="og:image" content="https://blog.l50.top/img/Pictures/linux-logo.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.l50.top/img/Pictures/linux-logo.png">
-<meta name="twitter:title" content="使用acme.sh申请并自动续期SSL证书">
-<meta name="twitter:description" content="一）ACME安装
+acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。"><meta name=author content="木木"><link rel=canonical href=https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/><link crossorigin=anonymous href=/assets/css/stylesheet.71d693e968cb1cef0850d07d74ebe3b179d7d1aea20cfcbf3c44dbad2e3bbc47.css integrity="sha256-cdaT6WjLHO8IUNB9dOvjsXnX0a6iDPy/PETbrS47vEc=" rel="preload stylesheet" as=style><link rel=icon href=https://blog.l50.top/img/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.l50.top/img/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://blog.l50.top/img/favicon-32x32.png><link rel=apple-touch-icon href=https://blog.l50.top/android-chrome-192x192.png><link rel=mask-icon href=https://blog.l50.top/android-chrome-512x512.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/"><meta property="og:site_name" content="木木的小站"><meta property="og:title" content="使用acme.sh申请并自动续期SSL证书"><meta property="og:description" content="一）ACME安装 1 curl https://get.acme.sh | sh 安装程序会自动做以下操作：
+自动把 acme.sh 安装到你的 home 的.acme.sh目录下，即~/.acme.sh/ 自动创建一个 bash 的 alias, 方便你的使用: alias acme.sh=~/.acme.sh/acme.sh 自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书. （二）更改默认证书机构 1 acme.sh --set-default-ca --server letsencrypt acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-15T20:52:43+08:00"><meta property="article:modified_time" content="2023-03-16T20:52:43+08:00"><meta property="article:tag" content="Daily"><meta property="article:tag" content="Life"><meta property="og:image" content="https://blog.l50.top/img/Pictures/linux-logo.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.l50.top/img/Pictures/linux-logo.png"><meta name=twitter:title content="使用acme.sh申请并自动续期SSL证书"><meta name=twitter:description content="一）ACME安装
 
 
 1
@@ -119,615 +47,69 @@ curl  https://get.acme.sh | sh
 acme.sh --set-default-ca  --server  letsencrypt
 
 
-acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://blog.l50.top/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "🖥️techs",
-      "item": "https://blog.l50.top/posts/techs/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  3 ,
-      "name": "使用acme.sh申请并自动续期SSL证书",
-      "item": "https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "使用acme.sh申请并自动续期SSL证书",
-  "name": "使用acme.sh申请并自动续期SSL证书",
-  "description": "一）ACME安装 1 curl https://get.acme.sh | sh 安装程序会自动做以下操作：\n自动把 acme.sh 安装到你的 home 的.acme.sh目录下，即~/.acme.sh/ 自动创建一个 bash 的 alias, 方便你的使用: alias acme.sh=~/.acme.sh/acme.sh 自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书. （二）更改默认证书机构 1 acme.sh --set-default-ca --server letsencrypt acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。\n",
-  "keywords": [
-    "Daily", "Life"
-  ],
-  "articleBody": "一）ACME安装 1 curl https://get.acme.sh | sh 安装程序会自动做以下操作：\n自动把 acme.sh 安装到你的 home 的.acme.sh目录下，即~/.acme.sh/ 自动创建一个 bash 的 alias, 方便你的使用: alias acme.sh=~/.acme.sh/acme.sh 自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书. （二）更改默认证书机构 1 acme.sh --set-default-ca --server letsencrypt acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。\n当然，也可以在生成证书时加一个--server参数来决定生成什么证书\n1 --server letsencrypt （三）生成证书 使用acme.sh --issue命令生成证书，但生成证书的同时会进行域名的所有权的验证。 acme.sh 有两种方式验证：http 和 dns 验证。\n注意：如果需要生成泛域名（*.a.com）的证书，不能使用HTTP认证域名，需要改用DNS认证的方式\nDNS 验证方式（推荐,手动也可，但是作者不想手动.jpg） 需要在域名上添加一条 txt 解析记录, 验证域名所有权\n方式1：手动添加记录 a. 生成txt解析内容\n1 2 acme.sh --issue --dns -d mydomain.com \\ --yes-I-know-dns-manual-mode-enough-go-ahead-please 以上mydomain.com只是测试域名，如果多个域名，则需多次使用-d配置，如-d www.a.com -d img.a.com\nb. 把txt解析添加到域名管理面板中\nc. 重新生成证书\n1 2 acme.sh --renew -d mydomain.com \\ --yes-I-know-dns-manual-mode-enough-go-ahead-please 注意，重新生成使用的是renew参数，把生成txt解析内容命令的issue改为renew\n方式2：域名提供商api自动解析 dns 方式的真正强大之处在于可以使用域名解析商提供的 api 自动添加 txt 记录完成验证.\na. 在域名提供商中，生成你的 api id 和 api key并记录\nb. 引入api id和key，以dnspod为例\n1 2 export DP_Id=\"1234\" export DP_Key=\"sADDsdasdgdsf\" 不同提供商，API参数值各不同，可参考下面的表格：自动 DNS API 集成\nc. 生成证书\n1 acme.sh --issue --dns dns_dp -d aa.com -d www.aa.com --dns的配置值也是根据域名提供商来决定，dns_dp表示dnspod。更多参数值可看下方表格\n表：自动 DNS API 集成\n服务商名称 服务商简称 所需API参数 获取API参数地址 cloudxns cx export CX_Key=\"123456\" export CX_Secret=\"abcdef\" 点击访问 dnspod.cn dp export DP_Id=\"123456\" export DP_Key=\"abcdef\" 点击访问 aliyun ali export Ali_Key=\"123456\" export Ali_Secret=\"abcdef\" 点击访问 cloudflare cf export CF_Key=\"123456\" export CF_Email=\"abc@example.com\" 点击访问 linode linode export LINODE_API_KEY=\"123456\" 点击访问 he he export HE_Username=\"username\" export HE_Password=\"password\" he的用户名密码 digitalocean dgon export DO_API_KEY=\"123456\" 点击访问 namesilo namesilo export Namesilo_Key=\"123456\" 点击访问 aws aws export AWS_ACCESS_KEY_ID=123456 export AWS_SECRET_ACCESS_KEY=abcdef 点击访问 namecom namecom export Namecom_Username=\"username\" export Namecom_Token=\"123456\" 点击访问 freedns freedns export FREEDNS_User=\"username\" export FREEDNS_Password=\"password\" freedns的用户名密码 godaddy gd export GD_Key=\"123456\" export GD_Secret=\"abcdef\" 点击访问 yandex yandex export PDD_Token=\"abcdef\" 点击访问 更多dnsapi的使用，可以查看文档\n（四）copy/安装 证书 默认生成的证书都放在安装目录下: ~/.acme.sh/，但是不要在web服务器中直接引用目录下的证书文件，也不要手动来拷贝证书文件到具体的web服务器中，手动拷贝会导致之后更新证书流程不能完全自动。\n正确方式是使用acme.sh的安装证书命令，acme.sh自动拷贝证书文件到具体目录中，拷贝命令会被记录下来，之后自动更新证书流程也会执行此拷贝步骤，从而实现更新证书流程的完全自动化。\n格式例子如下：\n1 2 3 4 5 acme.sh --install-cert -d xxx \\ --cert-file xxx \\ --key-file xxx \\ --fullchain-file xxx\\ --reloadcmd xxx 根据web服务器需要的文件按需引入对应的参数，reloadcmd定义证书更新后重启对应的web服务命令。\n以nginx为例：\n1 2 3 4 acme.sh --install-cert -d www.a.com -d img.a.com \\ --key-file /etc/nginx/cert_file/key.pem \\ --fullchain-file /etc/nginx/cert_file/fullchain.pem \\ --reloadcmd \"service nginx force-reload\" （五）web服务使用证书 通过上一步安装证书，已经把证书拷贝到目标的目录，接下来就是在web服务中使用证书即可。\n以nginx为例：\n1 2 3 4 5 6 7 ... server { listen 443 ssl; ssl_certificate /etc/nginx/cert_file/fullchain.pem; ssl_certificate_key /etc/nginx/cert_file/key.pem; # ... } 更新证书 目前证书在 60 天以后会自动更新，你无需任何操作，因为在acme.sh安装时，已经把相关的自动更新程序写入到crontab中，如果想要查看，可以通过以下命令：\n1 crontab -l 输出内容包含一个自动更新程序，大致内容如下：\n1 56 * * * * \"/root/.acme.sh\"/acme.sh --cron --home \"/root/.acme.sh\" \u003e /dev/null 停止自动更新 1 acme.sh --remove -d example.com 或者手动在~/.acme.sh/目录下删除对应的域名目录，如~/.acme.sh/a.com。\n",
-  "wordCount" : "1511",
-  "inLanguage": "en",
-  "image":"https://blog.l50.top/img/Pictures/linux-logo.png","datePublished": "2023-03-15T20:52:43+08:00",
-  "dateModified": "2023-03-16T20:52:43+08:00",
-  "author":[{
-    "@type": "Person",
-    "name": "木木"
-  }],
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "木木的小站",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://blog.l50.top/img/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://blog.l50.top/" accesskey="h" title="木木的小站 (Alt + H)">
-                <img src="https://blog.l50.top/img/favicon.ico" alt="" aria-label="logo"
-                    height="50">木木的小站</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://blog.l50.top/archives" title="⏳Archive">
-                    <span>⏳Archive</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://blog.l50.top/search" title="🔍Search (Alt &#43; /)" accesskey=/>
-                    <span>🔍Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://blog.l50.top/about" title="🗈About">
-                    <span>🗈About</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://blog.l50.top/tags" title="🕮Tags">
-                    <span>🕮Tags</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://blog.l50.top/categories" title="📓Categories">
-                    <span>📓Categories</span>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:mumu@l50.top" title="✉️Contact Via Email">
-                    <span>✉️Contact Via Email</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://blog.l50.top/">Home</a>&nbsp;»&nbsp;<a href="https://blog.l50.top/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://blog.l50.top/posts/techs/">🖥️techs</a></div>
-    <h1 class="post-title entry-hint-parent">
-      使用acme.sh申请并自动续期SSL证书
-    </h1>
-    <div class="post-meta"><span title='2023-03-15 20:52:43 +0800 +08'>2023-03-15</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;木木
-
-</div>
-  </header> 
-<figure class="entry-cover">
-        <img loading="eager" src="https://blog.l50.top/img/Pictures/linux-logo.png" alt="">
-        
-</figure><div class="toc">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#%e4%b8%80acme%e5%ae%89%e8%a3%85" aria-label="一）ACME安装">一）ACME安装</a></li>
-                <li>
-                    <a href="#%e4%ba%8c%e6%9b%b4%e6%94%b9%e9%bb%98%e8%ae%a4%e8%af%81%e4%b9%a6%e6%9c%ba%e6%9e%84" aria-label="（二）更改默认证书机构">（二）更改默认证书机构</a></li>
-                <li>
-                    <a href="#%e4%b8%89%e7%94%9f%e6%88%90%e8%af%81%e4%b9%a6" aria-label="（三）生成证书">（三）生成证书</a><ul>
-                        
-                <li>
-                    <a href="#dns-%e9%aa%8c%e8%af%81%e6%96%b9%e5%bc%8f%e6%8e%a8%e8%8d%90%e6%89%8b%e5%8a%a8%e4%b9%9f%e5%8f%af%e4%bd%86%e6%98%af%e4%bd%9c%e8%80%85%e4%b8%8d%e6%83%b3%e6%89%8b%e5%8a%a8jpg" aria-label="DNS 验证方式（推荐,手动也可，但是作者不想手动.jpg）">DNS 验证方式（推荐,手动也可，但是作者不想手动.jpg）</a><ul>
-                        <ul>
-                        
-                <li>
-                    <a href="#%e6%96%b9%e5%bc%8f1%e6%89%8b%e5%8a%a8%e6%b7%bb%e5%8a%a0%e8%ae%b0%e5%bd%95" aria-label="方式1：手动添加记录">方式1：手动添加记录</a></li>
-                <li>
-                    <a href="#%e6%96%b9%e5%bc%8f2%e5%9f%9f%e5%90%8d%e6%8f%90%e4%be%9b%e5%95%86api%e8%87%aa%e5%8a%a8%e8%a7%a3%e6%9e%90" aria-label="方式2：域名提供商api自动解析">方式2：域名提供商api自动解析</a></li></ul>
-                    </ul>
-                </li></ul>
-                </li>
-                <li>
-                    <a href="#%e5%9b%9bcopy%e5%ae%89%e8%a3%85-%e8%af%81%e4%b9%a6" aria-label="（四）copy/安装 证书">（四）copy/安装 证书</a></li>
-                <li>
-                    <a href="#%e4%ba%94web%e6%9c%8d%e5%8a%a1%e4%bd%bf%e7%94%a8%e8%af%81%e4%b9%a6" aria-label="（五）web服务使用证书">（五）web服务使用证书</a></li>
-                <li>
-                    <a href="#%e6%9b%b4%e6%96%b0%e8%af%81%e4%b9%a6" aria-label="更新证书">更新证书</a></li>
-                <li>
-                    <a href="#%e5%81%9c%e6%ad%a2%e8%87%aa%e5%8a%a8%e6%9b%b4%e6%96%b0" aria-label="停止自动更新">停止自动更新</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
-  <div class="post-content"><h2 id="一acme安装">一）ACME安装<a hidden class="anchor" aria-hidden="true" href="#一acme安装">#</a></h2>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl  https://get.acme.sh | sh
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>安装程序会自动做以下操作：</p>
-<ul>
-<li>自动把 acme.sh 安装到你的 <strong>home</strong> 的<code>.acme.sh</code>目录下，即<code>~/.acme.sh/</code></li>
-<li>自动创建一个 bash 的 alias, 方便你的使用: <code>alias acme.sh=~/.acme.sh/acme.sh</code></li>
-<li>自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书.</li>
-</ul>
-<h2 id="二更改默认证书机构">（二）更改默认证书机构<a hidden class="anchor" aria-hidden="true" href="#二更改默认证书机构">#</a></h2>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --set-default-ca  --server  letsencrypt
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。</p>
-<p>当然，也可以在生成证书时加一个<code>--server</code>参数来决定生成什么证书</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>--server letsencrypt
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="三生成证书">（三）生成证书<a hidden class="anchor" aria-hidden="true" href="#三生成证书">#</a></h2>
-<p>使用<code>acme.sh --issue</code>命令生成证书，但生成证书的同时会进行域名的所有权的验证。 <strong>acme.sh</strong> 有两种方式验证：http 和 dns 验证。</p>
-<blockquote>
-<p>注意：如果需要生成泛域名（<code>*.a.com</code>）的证书，不能使用HTTP认证域名，需要改用DNS认证的方式</p></blockquote>
-<h3 id="dns-验证方式推荐手动也可但是作者不想手动jpg">DNS 验证方式（推荐,手动也可，但是作者不想手动.jpg）<a hidden class="anchor" aria-hidden="true" href="#dns-验证方式推荐手动也可但是作者不想手动jpg">#</a></h3>
-<p>需要在域名上添加一条 txt 解析记录, 验证域名所有权</p>
-<h5 id="方式1手动添加记录">方式1：手动添加记录<a hidden class="anchor" aria-hidden="true" href="#方式1手动添加记录">#</a></h5>
-<p>a. 生成txt解析内容</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh  --issue  --dns -d mydomain.com \
-</span></span><span style="display:flex;"><span> --yes-I-know-dns-manual-mode-enough-go-ahead-please
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>以上mydomain.com只是测试域名，如果多个域名，则需多次使用-d配置，如<code>-d www.a.com -d img.a.com</code></p></blockquote>
-<p>b. 把txt解析添加到域名管理面板中</p>
-<p>c. 重新生成证书</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh  --renew   -d mydomain.com \
-</span></span><span style="display:flex;"><span>  --yes-I-know-dns-manual-mode-enough-go-ahead-please
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>注意，重新生成使用的是<code>renew</code>参数，把生成txt解析内容命令的<code>issue</code>改为<code>renew</code></p></blockquote>
-<h5 id="方式2域名提供商api自动解析">方式2：域名提供商api自动解析<a hidden class="anchor" aria-hidden="true" href="#方式2域名提供商api自动解析">#</a></h5>
-<blockquote>
-<p>dns 方式的真正强大之处在于可以使用域名解析商提供的 api 自动添加 txt 记录完成验证.</p></blockquote>
-<p>a. 在域名提供商中，生成你的 api id 和 api key并记录</p>
-<p>b. 引入api id和key，以dnspod为例</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">export</span> DP_Id=<span style="color:#0ff;font-weight:bold">&#34;1234&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">export</span> DP_Key=<span style="color:#0ff;font-weight:bold">&#34;sADDsdasdgdsf&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>不同提供商，API参数值各不同，可参考下面的表格：自动 DNS API 集成</p>
-<p>c. 生成证书</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --issue --dns dns_dp  -d aa.com -d www.aa.com
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>--dns</code>的配置值也是根据域名提供商来决定，dns_dp表示dnspod。更多参数值可看下方表格</p>
-<p>表：自动 DNS API 集成</p>
-<table>
-  <thead>
-      <tr>
-          <th>服务商名称</th>
-          <th>服务商简称</th>
-          <th>所需API参数</th>
-          <th>获取API参数地址</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>cloudxns</td>
-          <td>cx</td>
-          <td><code>export CX_Key=&quot;123456&quot;</code> <code>export CX_Secret=&quot;abcdef&quot;</code></td>
-          <td><a href="https://www.cloudxns.net/AccountManage/apimanage.html">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>dnspod.cn</td>
-          <td>dp</td>
-          <td><code>export DP_Id=&quot;123456&quot;</code> <code>export DP_Key=&quot;abcdef&quot;</code></td>
-          <td><a href="https://www.dnspod.cn/console/user/security">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>aliyun</td>
-          <td>ali</td>
-          <td><code>export Ali_Key=&quot;123456&quot;</code> <code>export Ali_Secret=&quot;abcdef&quot;</code></td>
-          <td><a href="https://ak-console.aliyun.com/#/accesskey">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>cloudflare</td>
-          <td>cf</td>
-          <td><code>export CF_Key=&quot;123456&quot;</code> <code>export CF_Email=&quot;abc@example.com&quot;</code></td>
-          <td><a href="https://dash.cloudflare.com/profile/api-tokens">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>linode</td>
-          <td>linode</td>
-          <td><code>export LINODE_API_KEY=&quot;123456&quot;</code></td>
-          <td><a href="https://manager.linode.com/profile/api">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>he</td>
-          <td>he</td>
-          <td><code>export HE_Username=&quot;username&quot;</code> <code>export HE_Password=&quot;password&quot;</code></td>
-          <td><a href="https://dns.he.net/">he</a>的用户名密码</td>
-      </tr>
-      <tr>
-          <td>digitalocean</td>
-          <td>dgon</td>
-          <td><code>export DO_API_KEY=&quot;123456&quot;</code></td>
-          <td><a href="https://cloud.digitalocean.com/settings/applications">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>namesilo</td>
-          <td>namesilo</td>
-          <td><code>export Namesilo_Key=&quot;123456&quot;</code></td>
-          <td><a href="https://www.namesilo.com/account_api.php">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>aws</td>
-          <td>aws</td>
-          <td><code>export AWS_ACCESS_KEY_ID=123456</code> <code>export AWS_SECRET_ACCESS_KEY=abcdef</code></td>
-          <td><a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>namecom</td>
-          <td>namecom</td>
-          <td><code>export Namecom_Username=&quot;username&quot;</code> <code>export Namecom_Token=&quot;123456&quot;</code></td>
-          <td><a href="https://www.name.com/reseller/apply">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>freedns</td>
-          <td>freedns</td>
-          <td><code>export FREEDNS_User=&quot;username&quot;</code> <code>export FREEDNS_Password=&quot;password&quot;</code></td>
-          <td><a href="https://freedns.afraid.org/">freedns</a>的用户名密码</td>
-      </tr>
-      <tr>
-          <td>godaddy</td>
-          <td>gd</td>
-          <td><code>export GD_Key=&quot;123456&quot;</code> <code>export GD_Secret=&quot;abcdef&quot;</code></td>
-          <td><a href="https://developer.godaddy.com/keys/">点击访问</a></td>
-      </tr>
-      <tr>
-          <td>yandex</td>
-          <td>yandex</td>
-          <td><code>export PDD_Token=&quot;abcdef&quot;</code></td>
-          <td><a href="https://tech.yandex.com/domain/doc/concepts/access-docpage/">点击访问</a></td>
-      </tr>
-  </tbody>
-</table>
-<p>更多dnsapi的使用，可以查看<a href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi">文档</a></p>
-<h2 id="四copy安装-证书">（四）copy/安装 证书<a hidden class="anchor" aria-hidden="true" href="#四copy安装-证书">#</a></h2>
-<p>默认生成的证书都放在安装目录下: <code>~/.acme.sh/</code>，但是不要在web服务器中直接引用目录下的证书文件，也不要手动来拷贝证书文件到具体的web服务器中，手动拷贝会导致之后更新证书流程不能完全自动。</p>
-<p>正确方式是使用acme.sh的安装证书命令，acme.sh自动拷贝证书文件到具体目录中，拷贝命令会被记录下来，之后自动更新证书流程也会执行此拷贝步骤，从而实现更新证书流程的完全自动化。</p>
-<p>格式例子如下：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>acme.sh --install-cert -d xxx \
-</span></span><span style="display:flex;"><span>		--cert-file xxx \
-</span></span><span style="display:flex;"><span>		--key-file xxx \
-</span></span><span style="display:flex;"><span>		--fullchain-file xxx\
-</span></span><span style="display:flex;"><span>		--reloadcmd xxx
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>根据web服务器需要的文件按需引入对应的参数，reloadcmd定义证书更新后重启对应的web服务命令。</p>
-<p>以nginx为例：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>acme.sh --install-cert -d www.a.com -d img.a.com \
-</span></span><span style="display:flex;"><span>		--key-file   /etc/nginx/cert_file/key.pem  \
-</span></span><span style="display:flex;"><span>		--fullchain-file /etc/nginx/cert_file/fullchain.pem \
-</span></span><span style="display:flex;"><span>		--reloadcmd     <span style="color:#0ff;font-weight:bold">&#34;service nginx force-reload&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="五web服务使用证书">（五）web服务使用证书<a hidden class="anchor" aria-hidden="true" href="#五web服务使用证书">#</a></h2>
-<p>通过上一步安装证书，已经把证书拷贝到目标的目录，接下来就是在web服务中使用证书即可。</p>
-<p>以nginx为例：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span>server {
-</span></span><span style="display:flex;"><span>  listen       443 ssl;
-</span></span><span style="display:flex;"><span>  ssl_certificate      /etc/nginx/cert_file/fullchain.pem;
-</span></span><span style="display:flex;"><span>  ssl_certificate_key  /etc/nginx/cert_file/key.pem;
-</span></span><span style="display:flex;"><span>  # ...
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="更新证书">更新证书<a hidden class="anchor" aria-hidden="true" href="#更新证书">#</a></h2>
-<p>目前证书在 60 天以后会自动更新，你无需任何操作，因为在acme.sh安装时，已经把相关的自动更新程序写入到crontab中，如果想要查看，可以通过以下命令：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>crontab -l
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>输出内容包含一个自动更新程序，大致内容如下：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>56 * * * * &#34;/root/.acme.sh&#34;/acme.sh --cron --home &#34;/root/.acme.sh&#34; &gt; /dev/null
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="停止自动更新">停止自动更新<a hidden class="anchor" aria-hidden="true" href="#停止自动更新">#</a></h2>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --remove -d example.com 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>或者手动在<code>~/.acme.sh/</code>目录下删除对应的域名目录，如<code>~/.acme.sh/a.com</code>。</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://blog.l50.top/tags/daily/">Daily</a></li>
-      <li><a href="https://blog.l50.top/tags/life/">Life</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://blog.l50.top/posts/life/%E6%96%B0%E6%B5%B7%E8%AF%9A%E7%9A%84%E4%B8%89%E5%B9%B4%E4%B9%8B%E7%BA%A6-%E9%93%83%E8%8A%BD%E4%B9%8B%E6%97%85/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>新海诚的三年之约 铃芽之旅</span>
-  </a>
-  <a class="next" href="https://blog.l50.top/posts/techs/rsa%E7%AE%97%E6%B3%95%E5%92%8Cecc%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84ssl%E8%AF%81%E4%B9%A6%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94/">
-    <span class="title">Next »</span>
-    <br>
-    <span>RSA算法和ECC加密算法的SSL证书区别对比</span>
-  </a>
-</nav>
-
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://blog.l50.top/">木木的小站</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.l50.top/posts/"},{"@type":"ListItem","position":2,"name":"🖥️techs","item":"https://blog.l50.top/posts/techs/"},{"@type":"ListItem","position":3,"name":"使用acme.sh申请并自动续期SSL证书","item":"https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"使用acme.sh申请并自动续期SSL证书","name":"使用acme.sh申请并自动续期SSL证书","description":"一）ACME安装 1 curl https://get.acme.sh | sh 安装程序会自动做以下操作：\n自动把 acme.sh 安装到你的 home 的.acme.sh目录下，即~/.acme.sh/ 自动创建一个 bash 的 alias, 方便你的使用: alias acme.sh=~/.acme.sh/acme.sh 自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书. （二）更改默认证书机构 1 acme.sh --set-default-ca --server letsencrypt acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。\n","keywords":["Daily","Life"],"articleBody":"一）ACME安装 1 curl https://get.acme.sh | sh 安装程序会自动做以下操作：\n自动把 acme.sh 安装到你的 home 的.acme.sh目录下，即~/.acme.sh/ 自动创建一个 bash 的 alias, 方便你的使用: alias acme.sh=~/.acme.sh/acme.sh 自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书. （二）更改默认证书机构 1 acme.sh --set-default-ca --server letsencrypt acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。\n当然，也可以在生成证书时加一个--server参数来决定生成什么证书\n1 --server letsencrypt （三）生成证书 使用acme.sh --issue命令生成证书，但生成证书的同时会进行域名的所有权的验证。 acme.sh 有两种方式验证：http 和 dns 验证。\n注意：如果需要生成泛域名（*.a.com）的证书，不能使用HTTP认证域名，需要改用DNS认证的方式\nDNS 验证方式（推荐,手动也可，但是作者不想手动.jpg） 需要在域名上添加一条 txt 解析记录, 验证域名所有权\n方式1：手动添加记录 a. 生成txt解析内容\n1 2 acme.sh --issue --dns -d mydomain.com \\ --yes-I-know-dns-manual-mode-enough-go-ahead-please 以上mydomain.com只是测试域名，如果多个域名，则需多次使用-d配置，如-d www.a.com -d img.a.com\nb. 把txt解析添加到域名管理面板中\nc. 重新生成证书\n1 2 acme.sh --renew -d mydomain.com \\ --yes-I-know-dns-manual-mode-enough-go-ahead-please 注意，重新生成使用的是renew参数，把生成txt解析内容命令的issue改为renew\n方式2：域名提供商api自动解析 dns 方式的真正强大之处在于可以使用域名解析商提供的 api 自动添加 txt 记录完成验证.\na. 在域名提供商中，生成你的 api id 和 api key并记录\nb. 引入api id和key，以dnspod为例\n1 2 export DP_Id=\"1234\" export DP_Key=\"sADDsdasdgdsf\" 不同提供商，API参数值各不同，可参考下面的表格：自动 DNS API 集成\nc. 生成证书\n1 acme.sh --issue --dns dns_dp -d aa.com -d www.aa.com --dns的配置值也是根据域名提供商来决定，dns_dp表示dnspod。更多参数值可看下方表格\n表：自动 DNS API 集成\n服务商名称 服务商简称 所需API参数 获取API参数地址 cloudxns cx export CX_Key=\"123456\" export CX_Secret=\"abcdef\" 点击访问 dnspod.cn dp export DP_Id=\"123456\" export DP_Key=\"abcdef\" 点击访问 aliyun ali export Ali_Key=\"123456\" export Ali_Secret=\"abcdef\" 点击访问 cloudflare cf export CF_Key=\"123456\" export CF_Email=\"abc@example.com\" 点击访问 linode linode export LINODE_API_KEY=\"123456\" 点击访问 he he export HE_Username=\"username\" export HE_Password=\"password\" he的用户名密码 digitalocean dgon export DO_API_KEY=\"123456\" 点击访问 namesilo namesilo export Namesilo_Key=\"123456\" 点击访问 aws aws export AWS_ACCESS_KEY_ID=123456 export AWS_SECRET_ACCESS_KEY=abcdef 点击访问 namecom namecom export Namecom_Username=\"username\" export Namecom_Token=\"123456\" 点击访问 freedns freedns export FREEDNS_User=\"username\" export FREEDNS_Password=\"password\" freedns的用户名密码 godaddy gd export GD_Key=\"123456\" export GD_Secret=\"abcdef\" 点击访问 yandex yandex export PDD_Token=\"abcdef\" 点击访问 更多dnsapi的使用，可以查看文档\n（四）copy/安装 证书 默认生成的证书都放在安装目录下: ~/.acme.sh/，但是不要在web服务器中直接引用目录下的证书文件，也不要手动来拷贝证书文件到具体的web服务器中，手动拷贝会导致之后更新证书流程不能完全自动。\n正确方式是使用acme.sh的安装证书命令，acme.sh自动拷贝证书文件到具体目录中，拷贝命令会被记录下来，之后自动更新证书流程也会执行此拷贝步骤，从而实现更新证书流程的完全自动化。\n格式例子如下：\n1 2 3 4 5 acme.sh --install-cert -d xxx \\ --cert-file xxx \\ --key-file xxx \\ --fullchain-file xxx\\ --reloadcmd xxx 根据web服务器需要的文件按需引入对应的参数，reloadcmd定义证书更新后重启对应的web服务命令。\n以nginx为例：\n1 2 3 4 acme.sh --install-cert -d www.a.com -d img.a.com \\ --key-file /etc/nginx/cert_file/key.pem \\ --fullchain-file /etc/nginx/cert_file/fullchain.pem \\ --reloadcmd \"service nginx force-reload\" （五）web服务使用证书 通过上一步安装证书，已经把证书拷贝到目标的目录，接下来就是在web服务中使用证书即可。\n以nginx为例：\n1 2 3 4 5 6 7 ... server { listen 443 ssl; ssl_certificate /etc/nginx/cert_file/fullchain.pem; ssl_certificate_key /etc/nginx/cert_file/key.pem; # ... } 更新证书 目前证书在 60 天以后会自动更新，你无需任何操作，因为在acme.sh安装时，已经把相关的自动更新程序写入到crontab中，如果想要查看，可以通过以下命令：\n1 crontab -l 输出内容包含一个自动更新程序，大致内容如下：\n1 56 * * * * \"/root/.acme.sh\"/acme.sh --cron --home \"/root/.acme.sh\" \u003e /dev/null 停止自动更新 1 acme.sh --remove -d example.com 或者手动在~/.acme.sh/目录下删除对应的域名目录，如~/.acme.sh/a.com。\n","wordCount":"1511","inLanguage":"en","image":"https://blog.l50.top/img/Pictures/linux-logo.png","datePublished":"2023-03-15T20:52:43+08:00","dateModified":"2023-03-16T20:52:43+08:00","author":[{"@type":"Person","name":"木木"}],"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/"},"publisher":{"@type":"Organization","name":"木木的小站","logo":{"@type":"ImageObject","url":"https://blog.l50.top/img/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://blog.l50.top/ accesskey=h title="木木的小站 (Alt + H)"><img src=https://blog.l50.top/img/favicon.ico alt aria-label=logo height=50>木木的小站</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://blog.l50.top/archives title=⏳Archive><span>⏳Archive</span></a></li><li><a href=https://blog.l50.top/search title="🔍Search (Alt + /)" accesskey=/><span>🔍Search</span></a></li><li><a href=https://blog.l50.top/about title=🗈About><span>🗈About</span></a></li><li><a href=https://blog.l50.top/tags title=🕮Tags><span>🕮Tags</span></a></li><li><a href=https://blog.l50.top/categories title=📓Categories><span>📓Categories</span></a></li><li><a href=mailto:mumu@l50.top title="✉️Contact Via Email"><span>✉️Contact Via Email</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://blog.l50.top/>Home</a>&nbsp;»&nbsp;<a href=https://blog.l50.top/posts/>Posts</a>&nbsp;»&nbsp;<a href=https://blog.l50.top/posts/techs/>🖥️techs</a></div><h1 class="post-title entry-hint-parent">使用acme.sh申请并自动续期SSL证书</h1><div class=post-meta><span title='2023-03-15 20:52:43 +0800 +08'>2023-03-15</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;木木</div></header><figure class=entry-cover><img loading=eager src=https://blog.l50.top/img/Pictures/linux-logo.png alt></figure><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#%e4%b8%80acme%e5%ae%89%e8%a3%85 aria-label=一）ACME安装>一）ACME安装</a></li><li><a href=#%e4%ba%8c%e6%9b%b4%e6%94%b9%e9%bb%98%e8%ae%a4%e8%af%81%e4%b9%a6%e6%9c%ba%e6%9e%84 aria-label=（二）更改默认证书机构>（二）更改默认证书机构</a></li><li><a href=#%e4%b8%89%e7%94%9f%e6%88%90%e8%af%81%e4%b9%a6 aria-label=（三）生成证书>（三）生成证书</a><ul><li><a href=#dns-%e9%aa%8c%e8%af%81%e6%96%b9%e5%bc%8f%e6%8e%a8%e8%8d%90%e6%89%8b%e5%8a%a8%e4%b9%9f%e5%8f%af%e4%bd%86%e6%98%af%e4%bd%9c%e8%80%85%e4%b8%8d%e6%83%b3%e6%89%8b%e5%8a%a8jpg aria-label="DNS 验证方式（推荐,手动也可，但是作者不想手动.jpg）">DNS 验证方式（推荐,手动也可，但是作者不想手动.jpg）</a><ul><ul><li><a href=#%e6%96%b9%e5%bc%8f1%e6%89%8b%e5%8a%a8%e6%b7%bb%e5%8a%a0%e8%ae%b0%e5%bd%95 aria-label=方式1：手动添加记录>方式1：手动添加记录</a></li><li><a href=#%e6%96%b9%e5%bc%8f2%e5%9f%9f%e5%90%8d%e6%8f%90%e4%be%9b%e5%95%86api%e8%87%aa%e5%8a%a8%e8%a7%a3%e6%9e%90 aria-label=方式2：域名提供商api自动解析>方式2：域名提供商api自动解析</a></li></ul></ul></li></ul></li><li><a href=#%e5%9b%9bcopy%e5%ae%89%e8%a3%85-%e8%af%81%e4%b9%a6 aria-label="（四）copy/安装 证书">（四）copy/安装 证书</a></li><li><a href=#%e4%ba%94web%e6%9c%8d%e5%8a%a1%e4%bd%bf%e7%94%a8%e8%af%81%e4%b9%a6 aria-label=（五）web服务使用证书>（五）web服务使用证书</a></li><li><a href=#%e6%9b%b4%e6%96%b0%e8%af%81%e4%b9%a6 aria-label=更新证书>更新证书</a></li><li><a href=#%e5%81%9c%e6%ad%a2%e8%87%aa%e5%8a%a8%e6%9b%b4%e6%96%b0 aria-label=停止自动更新>停止自动更新</a></li></ul></div></details></div><div class=post-content><h2 id=一acme安装>一）ACME安装<a hidden class=anchor aria-hidden=true href=#一acme安装>#</a></h2><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>curl  https://get.acme.sh | sh
+</span></span></code></pre></td></tr></table></div></div><p>安装程序会自动做以下操作：</p><ul><li>自动把 acme.sh 安装到你的 <strong>home</strong> 的<code>.acme.sh</code>目录下，即<code>~/.acme.sh/</code></li><li>自动创建一个 bash 的 alias, 方便你的使用: <code>alias acme.sh=~/.acme.sh/acme.sh</code></li><li>自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书.</li></ul><h2 id=二更改默认证书机构>（二）更改默认证书机构<a hidden class=anchor aria-hidden=true href=#二更改默认证书机构>#</a></h2><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>acme.sh --set-default-ca  --server  letsencrypt
+</span></span></code></pre></td></tr></table></div></div><p>acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。</p><p>当然，也可以在生成证书时加一个<code>--server</code>参数来决定生成什么证书</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>--server letsencrypt
+</span></span></code></pre></td></tr></table></div></div><h2 id=三生成证书>（三）生成证书<a hidden class=anchor aria-hidden=true href=#三生成证书>#</a></h2><p>使用<code>acme.sh --issue</code>命令生成证书，但生成证书的同时会进行域名的所有权的验证。 <strong>acme.sh</strong> 有两种方式验证：http 和 dns 验证。</p><blockquote><p>注意：如果需要生成泛域名（<code>*.a.com</code>）的证书，不能使用HTTP认证域名，需要改用DNS认证的方式</p></blockquote><h3 id=dns-验证方式推荐手动也可但是作者不想手动jpg>DNS 验证方式（推荐,手动也可，但是作者不想手动.jpg）<a hidden class=anchor aria-hidden=true href=#dns-验证方式推荐手动也可但是作者不想手动jpg>#</a></h3><p>需要在域名上添加一条 txt 解析记录, 验证域名所有权</p><h5 id=方式1手动添加记录>方式1：手动添加记录<a hidden class=anchor aria-hidden=true href=#方式1手动添加记录>#</a></h5><p>a. 生成txt解析内容</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>acme.sh  --issue  --dns -d mydomain.com \
+</span></span><span style=display:flex><span> --yes-I-know-dns-manual-mode-enough-go-ahead-please
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>以上mydomain.com只是测试域名，如果多个域名，则需多次使用-d配置，如<code>-d www.a.com -d img.a.com</code></p></blockquote><p>b. 把txt解析添加到域名管理面板中</p><p>c. 重新生成证书</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>acme.sh  --renew   -d mydomain.com \
+</span></span><span style=display:flex><span>  --yes-I-know-dns-manual-mode-enough-go-ahead-please
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>注意，重新生成使用的是<code>renew</code>参数，把生成txt解析内容命令的<code>issue</code>改为<code>renew</code></p></blockquote><h5 id=方式2域名提供商api自动解析>方式2：域名提供商api自动解析<a hidden class=anchor aria-hidden=true href=#方式2域名提供商api自动解析>#</a></h5><blockquote><p>dns 方式的真正强大之处在于可以使用域名解析商提供的 api 自动添加 txt 记录完成验证.</p></blockquote><p>a. 在域名提供商中，生成你的 api id 和 api key并记录</p><p>b. 引入api id和key，以dnspod为例</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span><span style=color:#fff;font-weight:700>export</span> DP_Id=<span style=color:#0ff;font-weight:700>&#34;1234&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#fff;font-weight:700>export</span> DP_Key=<span style=color:#0ff;font-weight:700>&#34;sADDsdasdgdsf&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>不同提供商，API参数值各不同，可参考下面的表格：自动 DNS API 集成</p><p>c. 生成证书</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>acme.sh --issue --dns dns_dp  -d aa.com -d www.aa.com
+</span></span></code></pre></td></tr></table></div></div><p><code>--dns</code>的配置值也是根据域名提供商来决定，dns_dp表示dnspod。更多参数值可看下方表格</p><p>表：自动 DNS API 集成</p><table><thead><tr><th>服务商名称</th><th>服务商简称</th><th>所需API参数</th><th>获取API参数地址</th></tr></thead><tbody><tr><td>cloudxns</td><td>cx</td><td><code>export CX_Key="123456"</code> <code>export CX_Secret="abcdef"</code></td><td><a href=https://www.cloudxns.net/AccountManage/apimanage.html>点击访问</a></td></tr><tr><td>dnspod.cn</td><td>dp</td><td><code>export DP_Id="123456"</code> <code>export DP_Key="abcdef"</code></td><td><a href=https://www.dnspod.cn/console/user/security>点击访问</a></td></tr><tr><td>aliyun</td><td>ali</td><td><code>export Ali_Key="123456"</code> <code>export Ali_Secret="abcdef"</code></td><td><a href=https://ak-console.aliyun.com/#/accesskey>点击访问</a></td></tr><tr><td>cloudflare</td><td>cf</td><td><code>export CF_Key="123456"</code> <code>export CF_Email="abc@example.com"</code></td><td><a href=https://dash.cloudflare.com/profile/api-tokens>点击访问</a></td></tr><tr><td>linode</td><td>linode</td><td><code>export LINODE_API_KEY="123456"</code></td><td><a href=https://manager.linode.com/profile/api>点击访问</a></td></tr><tr><td>he</td><td>he</td><td><code>export HE_Username="username"</code> <code>export HE_Password="password"</code></td><td><a href=https://dns.he.net/>he</a>的用户名密码</td></tr><tr><td>digitalocean</td><td>dgon</td><td><code>export DO_API_KEY="123456"</code></td><td><a href=https://cloud.digitalocean.com/settings/applications>点击访问</a></td></tr><tr><td>namesilo</td><td>namesilo</td><td><code>export Namesilo_Key="123456"</code></td><td><a href=https://www.namesilo.com/account_api.php>点击访问</a></td></tr><tr><td>aws</td><td>aws</td><td><code>export AWS_ACCESS_KEY_ID=123456</code> <code>export AWS_SECRET_ACCESS_KEY=abcdef</code></td><td><a href=http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html>点击访问</a></td></tr><tr><td>namecom</td><td>namecom</td><td><code>export Namecom_Username="username"</code> <code>export Namecom_Token="123456"</code></td><td><a href=https://www.name.com/reseller/apply>点击访问</a></td></tr><tr><td>freedns</td><td>freedns</td><td><code>export FREEDNS_User="username"</code> <code>export FREEDNS_Password="password"</code></td><td><a href=https://freedns.afraid.org/>freedns</a>的用户名密码</td></tr><tr><td>godaddy</td><td>gd</td><td><code>export GD_Key="123456"</code> <code>export GD_Secret="abcdef"</code></td><td><a href=https://developer.godaddy.com/keys/>点击访问</a></td></tr><tr><td>yandex</td><td>yandex</td><td><code>export PDD_Token="abcdef"</code></td><td><a href=https://tech.yandex.com/domain/doc/concepts/access-docpage/>点击访问</a></td></tr></tbody></table><p>更多dnsapi的使用，可以查看<a href=https://github.com/acmesh-official/acme.sh/wiki/dnsapi>文档</a></p><h2 id=四copy安装-证书>（四）copy/安装 证书<a hidden class=anchor aria-hidden=true href=#四copy安装-证书>#</a></h2><p>默认生成的证书都放在安装目录下: <code>~/.acme.sh/</code>，但是不要在web服务器中直接引用目录下的证书文件，也不要手动来拷贝证书文件到具体的web服务器中，手动拷贝会导致之后更新证书流程不能完全自动。</p><p>正确方式是使用acme.sh的安装证书命令，acme.sh自动拷贝证书文件到具体目录中，拷贝命令会被记录下来，之后自动更新证书流程也会执行此拷贝步骤，从而实现更新证书流程的完全自动化。</p><p>格式例子如下：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span>acme.sh --install-cert -d xxx \
+</span></span><span style=display:flex><span>		--cert-file xxx \
+</span></span><span style=display:flex><span>		--key-file xxx \
+</span></span><span style=display:flex><span>		--fullchain-file xxx\
+</span></span><span style=display:flex><span>		--reloadcmd xxx
+</span></span></code></pre></td></tr></table></div></div><p>根据web服务器需要的文件按需引入对应的参数，reloadcmd定义证书更新后重启对应的web服务命令。</p><p>以nginx为例：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span>acme.sh --install-cert -d www.a.com -d img.a.com \
+</span></span><span style=display:flex><span>		--key-file   /etc/nginx/cert_file/key.pem  \
+</span></span><span style=display:flex><span>		--fullchain-file /etc/nginx/cert_file/fullchain.pem \
+</span></span><span style=display:flex><span>		--reloadcmd     <span style=color:#0ff;font-weight:700>&#34;service nginx force-reload&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=五web服务使用证书>（五）web服务使用证书<a hidden class=anchor aria-hidden=true href=#五web服务使用证书>#</a></h2><p>通过上一步安装证书，已经把证书拷贝到目标的目录，接下来就是在web服务中使用证书即可。</p><p>以nginx为例：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">7
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>...
+</span></span><span style=display:flex><span>server {
+</span></span><span style=display:flex><span>  listen       443 ssl;
+</span></span><span style=display:flex><span>  ssl_certificate      /etc/nginx/cert_file/fullchain.pem;
+</span></span><span style=display:flex><span>  ssl_certificate_key  /etc/nginx/cert_file/key.pem;
+</span></span><span style=display:flex><span>  # ...
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><h2 id=更新证书>更新证书<a hidden class=anchor aria-hidden=true href=#更新证书>#</a></h2><p>目前证书在 60 天以后会自动更新，你无需任何操作，因为在acme.sh安装时，已经把相关的自动更新程序写入到crontab中，如果想要查看，可以通过以下命令：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>crontab -l
+</span></span></code></pre></td></tr></table></div></div><p>输出内容包含一个自动更新程序，大致内容如下：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>56 * * * * &#34;/root/.acme.sh&#34;/acme.sh --cron --home &#34;/root/.acme.sh&#34; &gt; /dev/null
+</span></span></code></pre></td></tr></table></div></div><h2 id=停止自动更新>停止自动更新<a hidden class=anchor aria-hidden=true href=#停止自动更新>#</a></h2><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>acme.sh --remove -d example.com 
+</span></span></code></pre></td></tr></table></div></div><p>或者手动在<code>~/.acme.sh/</code>目录下删除对应的域名目录，如<code>~/.acme.sh/a.com</code>。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://blog.l50.top/tags/daily/>Daily</a></li><li><a href=https://blog.l50.top/tags/life/>Life</a></li></ul><nav class=paginav><a class=prev href=https://blog.l50.top/posts/life/%E6%96%B0%E6%B5%B7%E8%AF%9A%E7%9A%84%E4%B8%89%E5%B9%B4%E4%B9%8B%E7%BA%A6-%E9%93%83%E8%8A%BD%E4%B9%8B%E6%97%85/><span class=title>« Prev</span><br><span>新海诚的三年之约 铃芽之旅</span>
+</a><a class=next href=https://blog.l50.top/posts/techs/rsa%E7%AE%97%E6%B3%95%E5%92%8Cecc%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84ssl%E8%AF%81%E4%B9%A6%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94/><span class=title>Next »</span><br><span>RSA算法和ECC加密算法的SSL证书区别对比</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://blog.l50.top/>木木的小站</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
