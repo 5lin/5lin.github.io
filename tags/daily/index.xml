@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Daily on 木木的小站</title>
+    <link>https://blog.l50.top/tags/daily/</link>
+    <description>Recent content in Daily on 木木的小站</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Mar 2024 14:14:36 +0800</lastBuildDate>
+    <atom:link href="https://blog.l50.top/tags/daily/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在mybatis Config.xml中配置别名</title>
+      <link>https://blog.l50.top/posts/techs/%E5%9C%A8mybatis-config.xml%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D/</link>
+      <pubDate>Tue, 19 Mar 2024 14:14:36 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E5%9C%A8mybatis-config.xml%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D/</guid>
+      <description>&lt;h1 id=&#34;在mybatis-configxml中配置别名的方法&#34;&gt;在mybatis-config,xml中配置别名的方法：&lt;/h1&gt;
+&lt;h3 id=&#34;顺序规定&#34;&gt;顺序规定&lt;/h3&gt;
+&lt;p&gt;The content of element type &amp;ldquo;configuration&amp;rdquo; must match &amp;ldquo;(properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?)&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;typeAliases需按顺序放在指定位置，即按上述顺序，位于setting后&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20240319110345104&#34; loading=&#34;lazy&#34; src=&#34;c:\\Users\\moki\\Desktop\\Blog-Git\\static\\img\\Pictures\\assets\\1.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;用法1使用aliasname这样即将type对应的类映射为-name了如下图即可在mybatis里面用abc替换topl50work5pojostudent&#34;&gt;用法1：使用alias=“name”，这样即将type对应的类映射为 name了，如下图，即可在mybatis里面用abc替换top.l50.work5.pojo.Student&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!--别名用法--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;typeAliases&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;typeAlias alias=&amp;#34;abc&amp;#34; type=&amp;#34;top.l50.work5.pojo.Student&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/typeAliases&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!--别名用法--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id=&#34;用法2只使用type这时候默认的别名就是这个属性的类名且不区分大小写如下图可采用student或student代替topl50work5pojostudent&#34;&gt;用法2：只使用type=，这时候默认的别名就是这个属性的类名，且不区分大小写，如下图，可采用（Student或student代替top.l50.work5.pojo.Student)&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!--别名用法--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;typeAliases&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;typeAlias type=&amp;#34;top.l50.work5.pojo.Student&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/typeAliases&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!--别名用法--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;（不常用）也可将两种混合使用，如图：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mybatis SqlSessionUtil工具类</title>
+      <link>https://blog.l50.top/posts/techs/mybatis-sqlsessionutil%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+      <pubDate>Mon, 18 Mar 2024 19:14:03 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/mybatis-sqlsessionutil%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;22
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;23
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;24
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;25
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;26
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;27
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;28
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;29
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;30
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;31
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;32
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;33
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;34
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;35
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;36
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;37
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;38
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;39
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;package&lt;/span&gt; top.l50.work5.utils;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;import&lt;/span&gt; org.apache.ibatis.io.Resources;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;import&lt;/span&gt; org.apache.ibatis.session.SqlSession;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;import&lt;/span&gt; org.apache.ibatis.session.SqlSessionFactory;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;import&lt;/span&gt; org.apache.ibatis.session.SqlSessionFactoryBuilder;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;import&lt;/span&gt; java.io.IOException;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;import&lt;/span&gt; java.io.InputStream;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;class&lt;/span&gt; SqlSessionUtil {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;volatile&lt;/span&gt; SqlSessionFactory sqlSessionFactory;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007f7f&#34;&gt;// 私有构造方法，防止外部实例化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;private&lt;/span&gt; SqlSessionUtil() {}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007f7f&#34;&gt;// 单例模式获取 SqlSessionFactory 实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;static&lt;/span&gt; SqlSessionFactory getSqlSessionFactory() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;if&lt;/span&gt; (sqlSessionFactory == &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;null&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;synchronized&lt;/span&gt; (SqlSessionUtil.&lt;span style=&#34;color:#007f7f&#34;&gt;class&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;if&lt;/span&gt; (sqlSessionFactory == &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;null&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;try&lt;/span&gt; (InputStream inputStream = Resources.&lt;span style=&#34;color:#007f7f&#34;&gt;getResourceAsStream&lt;/span&gt;(&lt;span style=&#34;color:#0ff;font-weight:bold&#34;&gt;&amp;#34;mybatis-config.xml&amp;#34;&lt;/span&gt;)) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        sqlSessionFactory = &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;new&lt;/span&gt; SqlSessionFactoryBuilder().&lt;span style=&#34;color:#007f7f&#34;&gt;build&lt;/span&gt;(inputStream);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    } &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;catch&lt;/span&gt; (IOException e) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#007f7f&#34;&gt;// 更具体的错误处理&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;new&lt;/span&gt; RuntimeException(&lt;span style=&#34;color:#0ff;font-weight:bold&#34;&gt;&amp;#34;Failed to create SqlSessionFactory: &amp;#34;&lt;/span&gt; + e.&lt;span style=&#34;color:#007f7f&#34;&gt;getMessage&lt;/span&gt;(), e);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;return&lt;/span&gt; sqlSessionFactory;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#007f7f&#34;&gt;// 获取 SqlSession 实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;static&lt;/span&gt; SqlSession getSqlSession() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;return&lt;/span&gt; getSqlSessionFactory().&lt;span style=&#34;color:#007f7f&#34;&gt;openSession&lt;/span&gt;(&lt;span style=&#34;color:#fff;font-weight:bold&#34;&gt;true&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;这个sqlsessionutil工具类的特色&#34;&gt;&lt;strong&gt;这个SqlSessionUtil工具类的特色：&lt;/strong&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;单例模式：&lt;/strong&gt; 通过使用单例模式确保了在整个应用程序生命周期内只有一个 &lt;code&gt;SqlSessionFactory&lt;/code&gt; 实例。这种设计可以减少资源消耗，并提高性能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;线程安全：&lt;/strong&gt; 代码采用了双重检查锁定机制，保证了在多线程环境下的线程安全性。这样就可以避免多个线程同时访问时可能出现的竞态条件问题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异常处理：&lt;/strong&gt; 在获取 &lt;code&gt;SqlSessionFactory&lt;/code&gt; 过程中，对可能出现的 &lt;code&gt;IOException&lt;/code&gt; 进行了处理，并提供了更具体的错误消息。这有助于更快地定位和解决问题，提高了代码的可靠性和可维护性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;封装性：&lt;/strong&gt; 工具类封装了 MyBatis 的初始化和资源获取过程，提供了一个便捷的方法来获取 &lt;code&gt;SqlSession&lt;/code&gt; 实例。这样就简化了代码使用，降低了代码耦合度，使得代码更加清晰和易于理解。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>Hadoop集群搭建实操教程</title>
+      <link>https://blog.l50.top/posts/techs/hadoop%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Thu, 07 Mar 2024 23:57:43 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/hadoop%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/</guid>
+      <description>&lt;p&gt;前面是正常步骤，环境变量安装需要的Hadoop版本和Java版本&lt;/p&gt;
+&lt;p&gt;这里只说下小细节：&lt;/p&gt;
+&lt;p&gt;hadoop-env.sh和yarn-env.sh里面需要添加export JAVA_HOME=&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo常用参数</title>
+      <link>https://blog.l50.top/posts/techs/hugo%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Sat, 02 Mar 2024 09:40:56 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/hugo%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0/</guid>
+      <description>&lt;p&gt;&lt;code&gt;hugo -F --cleanDestinationDir&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://hugo.aiaide.com/post/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/&#34;&gt;在 Hugo 中，&lt;code&gt;hugo -F --cleanDestinationDir&lt;/code&gt; 是一个常用的命令&lt;/a&gt;&lt;a href=&#34;https://hugo.aiaide.com/post/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/&#34;&gt;1&lt;/a&gt;。这个命令的含义如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-F&lt;/code&gt;：这是 &lt;code&gt;--buildFuture&lt;/code&gt; 的简写，它会让 Hugo 构建设置了未来日期的内容。默认情况下，Hugo 不会构建这些内容。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;&lt;code&gt;--cleanDestinationDir&lt;/code&gt;：这个参数会在 Hugo 生成静态网站之前清空输出目录（默认为 &lt;code&gt;public&lt;/code&gt; 目录）。也就是说，执行这个命令后，输出目录中的所有文件和目录都会被删除，然后 Hugo 会在这个空目录中生成新的静态网站&lt;/a&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;2&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;需要注意的是，&lt;code&gt;--cleanDestinationDir&lt;/code&gt; 参数并不会删除输出目录中的隐藏文件和隐藏目录&lt;/a&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;2&lt;/a&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;。这是因为这些文件和目录通常包含了一些对于网站运行必要的系统文件&lt;/a&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;2&lt;/a&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;。如果你希望完全清空输出目录，可能需要使用其他的方法，比如在部署脚本中使用 &lt;code&gt;rimraf&lt;/code&gt; 命令&lt;/a&gt;&lt;a href=&#34;https://discourse.gohugo.io/t/cleandestinationdir-and-hidden-files/32716&#34;&gt;2&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker常用操作</title>
+      <link>https://blog.l50.top/posts/techs/docker%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 02 Mar 2024 08:31:18 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/docker%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</guid>
+      <description>&lt;p&gt;要关闭所有正在运行的 Docker 容器，可以按照以下步骤进行操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;查看正在运行的容器&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;首先，可以使用以下命令查看当前正在运行的 Docker 容器：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这将列出所有正在运行的容器及其相关信息。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>手动生成自签证书</title>
+      <link>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Sat, 02 Mar 2024 08:30:32 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6/</guid>
+      <description>&lt;h3 id=&#34;要在-debian-上自签名证书您可以使用-openssl-工具以下是一些简单的步骤来生成自签名证书&#34;&gt;要在 Debian 上自签名证书，您可以使用 OpenSSL 工具。以下是一些简单的步骤来生成自签名证书：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安装 OpenSSL：&lt;/strong&gt; 如果您的系统上尚未安装 OpenSSL，请使用以下命令安装它：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>手动配置nginx多站点</title>
+      <link>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E5%A4%9A%E7%AB%99%E7%82%B9/</link>
+      <pubDate>Sat, 02 Mar 2024 08:29:56 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E5%A4%9A%E7%AB%99%E7%82%B9/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;要手动配置NGINX多站点，您可以按照以下步骤进行操作：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装NGINX：首先，确保您已经在服务器上安装了NGINX。您可以通过在终端中运行适用于您的操作系统的相应命令来安装NGINX。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lightsail自动检测用量（达95%自动关机)</title>
+      <link>https://blog.l50.top/posts/techs/lightsail%E8%87%AA%E5%8A%A8%E6%A3%80%E6%B5%8B%E7%94%A8%E9%87%8F%E8%BE%BE95%E8%87%AA%E5%8A%A8%E5%85%B3%E6%9C%BA/</link>
+      <pubDate>Sat, 02 Mar 2024 08:27:17 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/lightsail%E8%87%AA%E5%8A%A8%E6%A3%80%E6%B5%8B%E7%94%A8%E9%87%8F%E8%BE%BE95%E8%87%AA%E5%8A%A8%E5%85%B3%E6%9C%BA/</guid>
+      <description>&lt;h4 id=&#34;一背景&#34;&gt;一、背景&lt;/h4&gt;
+&lt;p&gt;Amazon Lightsail轻量服务器，算是在众多大厂服务器中比较划算的一款，3.5美刀一个月就可以获得这样的配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;512 MB Memory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2 vCPUs Processing
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;20 GB SSD Storage
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1 TB Transfer
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;还可以通过吃码的方式获取更优惠的价格。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用cron自动化需要注意的事</title>
+      <link>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8cron%E8%87%AA%E5%8A%A8%E5%8C%96%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B/</link>
+      <pubDate>Fri, 01 Mar 2024 23:11:16 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8cron%E8%87%AA%E5%8A%A8%E5%8C%96%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B/</guid>
+      <description>&lt;p&gt;使用cron记得调整本地时间与预期时区，一般的国外VPS都是美国时区，你要想在中国时间运行，你得修改localtime 的时区为Asia/Shanghai&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Debian12安装MariaDB_10.11</title>
+      <link>https://blog.l50.top/posts/techs/debian12%E5%AE%89%E8%A3%85mariadb_10.11/</link>
+      <pubDate>Fri, 01 Mar 2024 22:33:50 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/debian12%E5%AE%89%E8%A3%85mariadb_10.11/</guid>
+      <description>&lt;h1 id=&#34;在-debian-12-上安装-mariadb-1011&#34;&gt;在 Debian 12 上安装 MariaDB 10.11&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;1.在终端中运行下述命令更新系统：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;2.在终端中运行下述命令安装MariaDB 10.11：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install mariadb-server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;3.完成后可以在终端输入下述命令查看版本：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vmware手动修改特定虚拟机默认分配的IP地址</title>
+      <link>https://blog.l50.top/posts/techs/vmware%E6%89%8B%E5%8A%A8%E4%BF%AE%E6%94%B9%E7%89%B9%E5%AE%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%BB%98%E8%AE%A4%E5%88%86%E9%85%8D%E7%9A%84ip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Sun, 25 Feb 2024 08:28:32 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/vmware%E6%89%8B%E5%8A%A8%E4%BF%AE%E6%94%B9%E7%89%B9%E5%AE%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%BB%98%E8%AE%A4%E5%88%86%E9%85%8D%E7%9A%84ip%E5%9C%B0%E5%9D%80/</guid>
+      <description>&lt;p&gt;要在 Debian 中为您的 &lt;code&gt;ens33&lt;/code&gt; 网络接口设置固定 IP，您需要编辑 &lt;code&gt;/etc/network/interfaces&lt;/code&gt; 文件。以下是一个示例配置，您可以根据自己的网络环境进行修改：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007f7f&#34;&gt;# The loopback network interface&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;auto lo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iface lo inet loopback
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007f7f&#34;&gt;# The primary network interface&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;allow-hotplug ens33
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iface ens33 inet static
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    address 192.168.152.50
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    netmask 255.255.255.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gateway 192.168.152.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    dns-nameservers 192.168.152.2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在上述配置中：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>新海诚的三年之约 铃芽之旅</title>
+      <link>https://blog.l50.top/posts/life/%E6%96%B0%E6%B5%B7%E8%AF%9A%E7%9A%84%E4%B8%89%E5%B9%B4%E4%B9%8B%E7%BA%A6-%E9%93%83%E8%8A%BD%E4%B9%8B%E6%97%85/</link>
+      <pubDate>Sat, 25 Mar 2023 18:40:02 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/life/%E6%96%B0%E6%B5%B7%E8%AF%9A%E7%9A%84%E4%B8%89%E5%B9%B4%E4%B9%8B%E7%BA%A6-%E9%93%83%E8%8A%BD%E4%B9%8B%E6%97%85/</guid>
+      <description>&lt;p&gt;自从2016年入坑了新海诚的第一部电影，《你的名字》之后，对于新海诚的电影我是一部不落的看完了，2016年那部划时代的作品，《你的名字》实属让我印象深刻，第一遍看的时候没看明白，在后来的几年中陆陆续续看了不下三遍，最后看明白了，新海诚作为细节狂魔这件事是真的离谱。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用acme.sh申请并自动续期SSL证书</title>
+      <link>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Wed, 15 Mar 2023 20:52:43 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/</guid>
+      <description>&lt;h2 id=&#34;一acme安装&#34;&gt;一）ACME安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl  https://get.acme.sh | sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装程序会自动做以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动把 acme.sh 安装到你的 &lt;strong&gt;home&lt;/strong&gt; 的&lt;code&gt;.acme.sh&lt;/code&gt;目录下，即&lt;code&gt;~/.acme.sh/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自动创建一个 bash 的 alias, 方便你的使用: &lt;code&gt;alias acme.sh=~/.acme.sh/acme.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二更改默认证书机构&#34;&gt;（二）更改默认证书机构&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;acme.sh --set-default-ca  --server  letsencrypt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RSA算法和ECC加密算法的SSL证书区别对比</title>
+      <link>https://blog.l50.top/posts/techs/rsa%E7%AE%97%E6%B3%95%E5%92%8Cecc%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84ssl%E8%AF%81%E4%B9%A6%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Sat, 11 Mar 2023 21:39:01 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/rsa%E7%AE%97%E6%B3%95%E5%92%8Cecc%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84ssl%E8%AF%81%E4%B9%A6%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;RSA 算法和 ECC 加密算法的SSL证书区别对比&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;RSA算法和ECC算法是目前流行的主要的两种 SSL证书公钥加密算法。&lt;/p&gt;
+&lt;p&gt;当然还有刚刚兴起的国密SM2加密算法，但由于国密算法的 SSL证书目前仅仅两三款浏览器支持，且需要相应的服务器环境支持，所以本文不做过多介绍。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo折腾记录</title>
+      <link>https://blog.l50.top/posts/techs/hugo%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 04 Mar 2023 23:44:32 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/hugo%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;在终端直接输入hugo server -D就可以在本地预览了，本地预览网址为 localhost:1313， 输入hugo就可以生成public文件夹，这个文件夹可以部署到云服务器或者托管到github上， 注意：输入hugo的生成方式只会往public文件夹里添加内容，但是不会删除外部已经不存在而public里面还存在的文件， 所以我一般用hugo -F &amp;ndash;cleanDestinationDir命令，表示每次生成的public都是全新的，会覆盖原来的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git Core.autocrlf配置说明</title>
+      <link>https://blog.l50.top/posts/techs/git-core.autocrlf%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Fri, 03 Mar 2023 23:18:19 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/git-core.autocrlf%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/</guid>
+      <description>&lt;h3 id=&#34;格式化&#34;&gt;格式化&lt;/h3&gt;
+&lt;p&gt;格式化是许多开发人员在协作时，特别是在跨平台情况下，遇到的令人头疼的细小问题。 由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。不用怕，Git的一些配置选项会帮助你解决这些问题。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo备份以及遇到的问题</title>
+      <link>https://blog.l50.top/posts/techs/hugo%E5%A4%87%E4%BB%BD%E4%BB%A5%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 01 Mar 2023 22:48:26 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/hugo%E5%A4%87%E4%BB%BD%E4%BB%A5%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;当你在Windows下搭建hugo时你必须首先将git配置中的自动切换改为false，如果不调整该项，你通过Windows上传的hugo到github pages将会样式不对，即使你在本地预览的是正确的主题，你应当在操作之前使用：&lt;code&gt;git config core.autocrlf false&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://blog.l50.top/about/</link>
+      <pubDate>Wed, 01 Mar 2023 20:44:52 +0800</pubDate>
+      <guid>https://blog.l50.top/about/</guid>
+      <description>&lt;p&gt;This is a testing web page.&lt;/p&gt;
+&lt;p&gt;这是一个测试页面，还没想好要写什么。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

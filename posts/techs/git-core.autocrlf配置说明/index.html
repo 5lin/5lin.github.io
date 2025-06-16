@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Git Core.autocrlf配置说明 | 木木的小站</title>
+<meta name="keywords" content="Daily, Life">
+<meta name="description" content="格式化
+格式化是许多开发人员在协作时，特别是在跨平台情况下，遇到的令人头疼的细小问题。 由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。不用怕，Git的一些配置选项会帮助你解决这些问题。">
+<meta name="author" content="木木">
+<link rel="canonical" href="https://blog.l50.top/posts/techs/git-core.autocrlf%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.71d693e968cb1cef0850d07d74ebe3b179d7d1aea20cfcbf3c44dbad2e3bbc47.css" integrity="sha256-cdaT6WjLHO8IUNB9dOvjsXnX0a6iDPy/PETbrS47vEc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.l50.top/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.l50.top/img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.l50.top/img/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.l50.top/android-chrome-192x192.png">
+<link rel="mask-icon" href="https://blog.l50.top/android-chrome-512x512.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.l50.top/posts/techs/git-core.autocrlf%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://blog.l50.top/posts/techs/git-core.autocrlf%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/">
+  <meta property="og:site_name" content="木木的小站">
+  <meta property="og:title" content="Git Core.autocrlf配置说明">
+  <meta property="og:description" content="格式化 格式化是许多开发人员在协作时，特别是在跨平台情况下，遇到的令人头疼的细小问题。 由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。不用怕，Git的一些配置选项会帮助你解决这些问题。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-03-03T23:18:19+08:00">
+    <meta property="article:modified_time" content="2023-03-04T23:18:19+08:00">
+    <meta property="article:tag" content="Daily">
+    <meta property="article:tag" content="Life">
+    <meta property="og:image" content="https://blog.l50.top/img/Pictures/github-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.l50.top/img/Pictures/github-logo.png">
+<meta name="twitter:title" content="Git Core.autocrlf配置说明">
+<meta name="twitter:description" content="格式化
+格式化是许多开发人员在协作时，特别是在跨平台情况下，遇到的令人头疼的细小问题。 由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。不用怕，Git的一些配置选项会帮助你解决这些问题。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.l50.top/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🖥️techs",
+      "item": "https://blog.l50.top/posts/techs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Git Core.autocrlf配置说明",
+      "item": "https://blog.l50.top/posts/techs/git-core.autocrlf%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Git Core.autocrlf配置说明",
+  "name": "Git Core.autocrlf配置说明",
+  "description": "格式化 格式化是许多开发人员在协作时，特别是在跨平台情况下，遇到的令人头疼的细小问题。 由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。不用怕，Git的一些配置选项会帮助你解决这些问题。\n",
+  "keywords": [
+    "Daily", "Life"
+  ],
+  "articleBody": "格式化 格式化是许多开发人员在协作时，特别是在跨平台情况下，遇到的令人头疼的细小问题。 由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。不用怕，Git的一些配置选项会帮助你解决这些问题。\ncore.autocrlf 假如你正在Windows上写程序，又或者你正在和其他人合作，他们在Windows上编程，而你却在其他系统上，在这些情况下，你可能会遇到行尾 结束符问题。 这是因为Windows使用回车和换行两个字符来结束一行，而Mac和Linux只使用换行一个字符。 虽然这是小问题，但它会极大地扰乱跨平台协作。\n在Windows平台上，git默认的core.autocrlf是true，可以通过git config --list命令查看。\nGit可以在你提交时自动地把行结束符CRLF转换成LF，而在签出代码时把LF转换成CRLF。用core.autocrlf来打开此项功能， 如果是在Windows系统上，把它设置成true（默认配置），这样当签出代码时，LF会被转换成CRLF：\n1 Copy$ git config --global core.autocrlf true Linux或Mac系统使用LF作为行结束符，因此你不想Git在签出文件时进行自动的转换；当一个以CRLF为行结束符的文件不小心被引入时你肯定想进行修正， 把core.autocrlf设置成input来告诉Git在提交时把CRLF转换成LF，签出时不转换：\n1 Copy$ git config --global core.autocrlf input 这样会在Windows系统上的签出文件中保留CRLF，会在Mac和Linux系统上，包括仓库中保留LF。\n如果你是Windows程序员，且正在开发仅运行在Windows上的项目，可以设置false取消此功能，把回车符记录在库中：\n1 Copy$ git config --global core.autocrlf false 关于在IDEA中的提示，如下图所示，点击FIX AND COMMIT即可。 ",
+  "wordCount" : "754",
+  "inLanguage": "en",
+  "image":"https://blog.l50.top/img/Pictures/github-logo.png","datePublished": "2023-03-03T23:18:19+08:00",
+  "dateModified": "2023-03-04T23:18:19+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "木木"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.l50.top/posts/techs/git-core.autocrlf%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "木木的小站",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.l50.top/img/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.l50.top/" accesskey="h" title="木木的小站 (Alt + H)">
+                <img src="https://blog.l50.top/img/favicon.ico" alt="" aria-label="logo"
+                    height="50">木木的小站</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.l50.top/archives" title="⏳Archive">
+                    <span>⏳Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.l50.top/search" title="🔍Search (Alt &#43; /)" accesskey=/>
+                    <span>🔍Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.l50.top/about" title="🗈About">
+                    <span>🗈About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.l50.top/tags" title="🕮Tags">
+                    <span>🕮Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.l50.top/categories" title="📓Categories">
+                    <span>📓Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:mumu@l50.top" title="✉️Contact Via Email">
+                    <span>✉️Contact Via Email</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://blog.l50.top/">Home</a>&nbsp;»&nbsp;<a href="https://blog.l50.top/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://blog.l50.top/posts/techs/">🖥️techs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Git Core.autocrlf配置说明
+    </h1>
+    <div class="post-meta"><span title='2023-03-03 23:18:19 +0800 +08'>2023-03-03</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;木木
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://blog.l50.top/img/Pictures/github-logo.png" alt="">
+        
+</figure><div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e6%a0%bc%e5%bc%8f%e5%8c%96" aria-label="格式化">格式化</a></li>
+                <li>
+                    <a href="#coreautocrlf" aria-label="core.autocrlf">core.autocrlf</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="格式化">格式化<a hidden class="anchor" aria-hidden="true" href="#格式化">#</a></h3>
+<p>格式化是许多开发人员在协作时，特别是在跨平台情况下，遇到的令人头疼的细小问题。 由于编辑器的不同或者Windows程序员在跨平台项目中的文件行尾加入了回车换行符， 一些细微的空格变化会不经意地进入大家合作的工作或提交的补丁中。不用怕，Git的一些配置选项会帮助你解决这些问题。</p>
+<h3 id="coreautocrlf">core.autocrlf<a hidden class="anchor" aria-hidden="true" href="#coreautocrlf">#</a></h3>
+<p>假如你正在Windows上写程序，又或者你正在和其他人合作，他们在Windows上编程，而你却在其他系统上，在这些情况下，你可能会遇到行尾 结束符问题。 这是因为Windows使用回车和换行两个字符来结束一行，而Mac和Linux只使用换行一个字符。 虽然这是小问题，但它会极大地扰乱跨平台协作。</p>
+<p>在Windows平台上，git默认的core.autocrlf是true，可以通过<code>git config --list</code>命令查看。</p>
+<p>Git可以在你提交时自动地把行结束符CRLF转换成LF，而在签出代码时把LF转换成CRLF。用<code>core.autocrlf</code>来打开此项功能， 如果是在Windows系统上，把它设置成<code>true</code>（默认配置），这样当签出代码时，LF会被转换成CRLF：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Copy<span style="color:#f00">$</span> git config --global core.autocrlf <span style="color:#fff;font-weight:bold">true</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Linux或Mac系统使用LF作为行结束符，因此你不想Git在签出文件时进行自动的转换；当一个以CRLF为行结束符的文件不小心被引入时你肯定想进行修正， 把<code>core.autocrlf</code>设置成input来告诉Git在提交时把CRLF转换成LF，签出时不转换：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-verilog" data-lang="verilog"><span style="display:flex;"><span>Copy<span style="color:#f00">$</span> git config --global core.autocrlf <span style="color:#fff;font-weight:bold">input</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样会在Windows系统上的签出文件中保留CRLF，会在Mac和Linux系统上，包括仓库中保留LF。</p>
+<p>如果你是Windows程序员，且正在开发仅运行在Windows上的项目，可以设置<code>false</code>取消此功能，把回车符记录在库中：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Copy<span style="color:#f00">$</span> git config --global core.autocrlf <span style="color:#fff;font-weight:bold">false</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>关于在IDEA中的提示，如下图所示，点击<code>FIX AND COMMIT</code>即可。
+<img alt="img" loading="lazy" src="https://img2018.cnblogs.com/blog/1577027/201907/1577027-20190725140322466-21269825.png"></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.l50.top/tags/daily/">Daily</a></li>
+      <li><a href="https://blog.l50.top/tags/life/">Life</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://blog.l50.top/posts/techs/hugo%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Hugo折腾记录</span>
+  </a>
+  <a class="next" href="https://blog.l50.top/posts/techs/hugo%E5%A4%87%E4%BB%BD%E4%BB%A5%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Hugo备份以及遇到的问题</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://blog.l50.top/">木木的小站</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
