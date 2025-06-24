@@ -6,8 +6,15 @@
     <description>Recent content in Life on 木木的小站</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Jun 2025 23:29:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jun 2025 09:16:50 +0800</lastBuildDate>
     <atom:link href="https://blog.l50.top/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用wireguard配置代理</title>
+      <link>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8wireguard%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Tue, 24 Jun 2025 09:16:50 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8wireguard%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86/</guid>
+      <description>&lt;p&gt;如何在两台 Debian 12 服务器上，从零开始安装并配置 WireGuard，实现将一台服务器（客户端）的所有网络流量通过另一台服务器（服务端）进行代理转发。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Goedge Plus Version</title>
       <link>https://blog.l50.top/posts/techs/goedge-pro/</link>
@@ -60,15 +67,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;屏蔽官方域名&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hadoop集群搭建实操教程</title>
-      <link>https://blog.l50.top/posts/techs/hadoop%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Thu, 07 Mar 2024 23:57:43 +0800</pubDate>
-      <guid>https://blog.l50.top/posts/techs/hadoop%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/</guid>
-      <description>&lt;p&gt;前面是正常步骤，环境变量安装需要的Hadoop版本和Java版本&lt;/p&gt;
-&lt;p&gt;这里只说下小细节：&lt;/p&gt;
-&lt;p&gt;hadoop-env.sh和yarn-env.sh里面需要添加export JAVA_HOME=&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo常用参数</title>
