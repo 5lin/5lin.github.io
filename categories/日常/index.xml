@@ -6,8 +6,15 @@
     <description>Recent content in 日常 on 木木的小站</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Jun 2025 09:16:50 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jun 2025 21:15:53 +0800</lastBuildDate>
     <atom:link href="https://blog.l50.top/categories/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Caddy,简约与强大的完美结合</title>
+      <link>https://blog.l50.top/posts/techs/caddy%E7%AE%80%E7%BA%A6%E4%B8%8E%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88/</link>
+      <pubDate>Wed, 25 Jun 2025 21:15:53 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/caddy%E7%AE%80%E7%BA%A6%E4%B8%8E%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88/</guid>
+      <description>&lt;p&gt;你是否曾为 Nginx 或 Apache 的复杂配置而头疼？是否曾为了配置一个 SSL 证书、处理 HTTPS 跳转而耗费数小时？如果你对这些问题感同身受，那么是时候了解一下 Caddy 了——一个为现代互联网而生的 Web 服务器。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>使用wireguard配置代理</title>
       <link>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8wireguard%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86/</link>
