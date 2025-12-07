@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>🖥️techs on 木木的小站</title>
+    <link>https://blog.l50.top/posts/techs/</link>
+    <description>Recent content in 🖥️techs on 木木的小站</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 Mar 2024 08:31:18 +0800</lastBuildDate>
+    <atom:link href="https://blog.l50.top/posts/techs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker常用操作</title>
+      <link>https://blog.l50.top/posts/techs/docker%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 02 Mar 2024 08:31:18 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/docker%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</guid>
+      <description>&lt;p&gt;要关闭所有正在运行的 Docker 容器，可以按照以下步骤进行操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;查看正在运行的容器&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;首先，可以使用以下命令查看当前正在运行的 Docker 容器：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这将列出所有正在运行的容器及其相关信息。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>手动生成自签证书</title>
+      <link>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Sat, 02 Mar 2024 08:30:32 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6/</guid>
+      <description>&lt;h3 id=&#34;要在-debian-上自签名证书您可以使用-openssl-工具以下是一些简单的步骤来生成自签名证书&#34;&gt;要在 Debian 上自签名证书，您可以使用 OpenSSL 工具。以下是一些简单的步骤来生成自签名证书：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安装 OpenSSL：&lt;/strong&gt; 如果您的系统上尚未安装 OpenSSL，请使用以下命令安装它：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>手动配置nginx多站点</title>
+      <link>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E5%A4%9A%E7%AB%99%E7%82%B9/</link>
+      <pubDate>Sat, 02 Mar 2024 08:29:56 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E5%A4%9A%E7%AB%99%E7%82%B9/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;要手动配置NGINX多站点，您可以按照以下步骤进行操作：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装NGINX：首先，确保您已经在服务器上安装了NGINX。您可以通过在终端中运行适用于您的操作系统的相应命令来安装NGINX。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lightsail自动检测用量（达95%自动关机)</title>
+      <link>https://blog.l50.top/posts/techs/lightsail%E8%87%AA%E5%8A%A8%E6%A3%80%E6%B5%8B%E7%94%A8%E9%87%8F%E8%BE%BE95%E8%87%AA%E5%8A%A8%E5%85%B3%E6%9C%BA/</link>
+      <pubDate>Sat, 02 Mar 2024 08:27:17 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/lightsail%E8%87%AA%E5%8A%A8%E6%A3%80%E6%B5%8B%E7%94%A8%E9%87%8F%E8%BE%BE95%E8%87%AA%E5%8A%A8%E5%85%B3%E6%9C%BA/</guid>
+      <description>&lt;h4 id=&#34;一背景&#34;&gt;一、背景&lt;/h4&gt;
+&lt;p&gt;Amazon Lightsail轻量服务器，算是在众多大厂服务器中比较划算的一款，3.5美刀一个月就可以获得这样的配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;512 MB Memory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2 vCPUs Processing
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;20 GB SSD Storage
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1 TB Transfer
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;还可以通过吃码的方式获取更优惠的价格。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用cron自动化需要注意的事</title>
+      <link>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8cron%E8%87%AA%E5%8A%A8%E5%8C%96%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B/</link>
+      <pubDate>Fri, 01 Mar 2024 23:11:16 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8cron%E8%87%AA%E5%8A%A8%E5%8C%96%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B/</guid>
+      <description>&lt;p&gt;使用cron记得调整本地时间与预期时区，一般的国外VPS都是美国时区，你要想在中国时间运行，你得修改localtime 的时区为Asia/Shanghai&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Debian12安装MariaDB_10.11</title>
+      <link>https://blog.l50.top/posts/techs/debian12%E5%AE%89%E8%A3%85mariadb_10.11/</link>
+      <pubDate>Fri, 01 Mar 2024 22:33:50 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/debian12%E5%AE%89%E8%A3%85mariadb_10.11/</guid>
+      <description>&lt;h1 id=&#34;在-debian-12-上安装-mariadb-1011&#34;&gt;在 Debian 12 上安装 MariaDB 10.11&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;1.在终端中运行下述命令更新系统：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;2.在终端中运行下述命令安装MariaDB 10.11：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install mariadb-server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;3.完成后可以在终端输入下述命令查看版本：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vmware手动修改特定虚拟机默认分配的IP地址</title>
+      <link>https://blog.l50.top/posts/techs/vmware%E6%89%8B%E5%8A%A8%E4%BF%AE%E6%94%B9%E7%89%B9%E5%AE%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%BB%98%E8%AE%A4%E5%88%86%E9%85%8D%E7%9A%84ip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Sun, 25 Feb 2024 08:28:32 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/vmware%E6%89%8B%E5%8A%A8%E4%BF%AE%E6%94%B9%E7%89%B9%E5%AE%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%BB%98%E8%AE%A4%E5%88%86%E9%85%8D%E7%9A%84ip%E5%9C%B0%E5%9D%80/</guid>
+      <description>&lt;p&gt;要在 Debian 中为您的 &lt;code&gt;ens33&lt;/code&gt; 网络接口设置固定 IP，您需要编辑 &lt;code&gt;/etc/network/interfaces&lt;/code&gt; 文件。以下是一个示例配置，您可以根据自己的网络环境进行修改：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007f7f&#34;&gt;# The loopback network interface&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;auto lo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iface lo inet loopback
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#007f7f&#34;&gt;# The primary network interface&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;allow-hotplug ens33
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iface ens33 inet static
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    address 192.168.152.50
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    netmask 255.255.255.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gateway 192.168.152.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    dns-nameservers 192.168.152.2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在上述配置中：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用acme.sh申请并自动续期SSL证书</title>
+      <link>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Wed, 15 Mar 2023 20:52:43 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E4%BD%BF%E7%94%A8acme.sh%E7%94%B3%E8%AF%B7%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9Fssl%E8%AF%81%E4%B9%A6/</guid>
+      <description>&lt;h2 id=&#34;一acme安装&#34;&gt;一）ACME安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl  https://get.acme.sh | sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装程序会自动做以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动把 acme.sh 安装到你的 &lt;strong&gt;home&lt;/strong&gt; 的&lt;code&gt;.acme.sh&lt;/code&gt;目录下，即&lt;code&gt;~/.acme.sh/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自动创建一个 bash 的 alias, 方便你的使用: &lt;code&gt;alias acme.sh=~/.acme.sh/acme.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二更改默认证书机构&#34;&gt;（二）更改默认证书机构&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;acme.sh --set-default-ca  --server  letsencrypt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;acme被ZeroSSL收购，其默认的证书方式为ZeroSSL，但此证书生成时会携带邮箱，因此更换为letsencrypt。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo备份以及遇到的问题</title>
+      <link>https://blog.l50.top/posts/techs/hugo%E5%A4%87%E4%BB%BD%E4%BB%A5%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 01 Mar 2023 22:48:26 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/hugo%E5%A4%87%E4%BB%BD%E4%BB%A5%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;当你在Windows下搭建hugo时你必须首先将git配置中的自动切换改为false，如果不调整该项，你通过Windows上传的hugo到github pages将会样式不对，即使你在本地预览的是正确的主题，你应当在操作之前使用：&lt;code&gt;git config core.autocrlf false&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
