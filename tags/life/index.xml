@@ -6,8 +6,19 @@
     <description>Recent content in Life on 木木的小站</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Dec 2025 17:05:01 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Dec 2025 18:13:21 +0800</lastBuildDate>
     <atom:link href="https://blog.l50.top/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【踩坑记录】删不掉的“幽灵图片”</title>
+      <link>https://blog.l50.top/posts/techs/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%E5%88%A0%E4%B8%8D%E6%8E%89%E7%9A%84%E5%B9%BD%E7%81%B5%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Thu, 11 Dec 2025 18:13:21 +0800</pubDate>
+      <guid>https://blog.l50.top/posts/techs/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%E5%88%A0%E4%B8%8D%E6%8E%89%E7%9A%84%E5%B9%BD%E7%81%B5%E5%9B%BE%E7%89%87/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;写在前面：&lt;/strong&gt;
+如果未来的某一天，你再次发现明明已经从存储桶里永久删除的图片，竟然还能在浏览器里正常访问，甚至 Cloudflare 缓存怎么清都清不掉。
+&lt;strong&gt;请冷静，不要怀疑 CDN 出了 Bug，也不要觉得遇到了灵异事件。&lt;/strong&gt;
+回来看这篇笔记，凶手就是当初那个“过于贴心”的开源项目代码。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Swap交换空间设置多大好？其积极性（Swappiness）又是多少合适？</title>
       <link>https://blog.l50.top/posts/techs/swap%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4%E8%AE%BE%E7%BD%AE%E5%A4%9A%E5%A4%A7%E5%A5%BD%E5%85%B6%E7%A7%AF%E6%9E%81%E6%80%A7swappiness%E5%8F%88%E6%98%AF%E5%A4%9A%E5%B0%91%E5%90%88%E9%80%82/</link>
